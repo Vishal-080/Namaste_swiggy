@@ -1,3 +1,6 @@
+import './App.css';
+
+
 const Header = ( ) => {
   return (
     <div className="Header">
