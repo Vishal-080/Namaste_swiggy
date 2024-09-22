@@ -38,3 +38,14 @@
  /*  border: 1px solid red; */
   padding: 4px;
 }
+
+.res-card{
+  width: 200px;
+  height: 350px;
+  border: 1px solid black;
+
+}
+
+.search{
+  padding: 10px;
+}
