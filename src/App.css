@@ -39,7 +39,12 @@
   padding: 4px;
 }
 
-
+.res-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .res-card{
   width: 200px;
@@ -52,16 +57,22 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: antiquewhite;
+  border-radius: 8px;
+  color: #000;
 }
 
 .res-img{
   width: 90%;
   height: 150px;
   object-fit: none;
+  border-radius: 8px;
 }
 
-.search{
+.search > input{
   padding: 10px;
   margin: 20px;
+  background-color: aliceblue;
+  border-radius: 8px 0 8px;
+  color: #000;
 }
-

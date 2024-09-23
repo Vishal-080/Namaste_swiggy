@@ -33,8 +33,19 @@ const RestaurantCard = () => {
 const Body = () => {
   return (
     <div className='body'>
-      <div className='search'>Search bar</div>
+      <div className='search'>
+        <input cl type="text" name="search" placeholder="Search Restaurants, Cusines, Dishes here..."/>
+      </div>
       <div className='res-container'>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
+        <RestaurantCard/>
         <RestaurantCard/>
       </div>
     </div>
