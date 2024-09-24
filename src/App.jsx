@@ -26,7 +26,7 @@ const RestaurantCard = (props) => {
       <h2>{props.resName}</h2>
       <h4>{props.resRatings}</h4>
       <h4>{props.price}</h4>
-      <button className=' '>Order Now</button>
+      <button className='order-btn'>Order Now</button>
     </div>
   )
 }
@@ -47,7 +47,7 @@ const Body = () => {
         <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
         <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
         <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
       </div>
     </div>
   )
