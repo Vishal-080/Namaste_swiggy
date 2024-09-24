@@ -26,7 +26,7 @@ const RestaurantCard = (props) => {
       <h2>{props.resName}</h2>
       <h4>{props.resRatings}</h4>
       <h4>{props.price}</h4>
-      <button className='order-btn'>Order Now</button>
+      <button className=' '>Order Now</button>
     </div>
   )
 }
@@ -38,16 +38,16 @@ const Body = () => {
         <input cl type="text" name="search" placeholder="Search Restaurants, Cusines, Dishes here..."/>
       </div>
       <div className='res-container'>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
-        <RestaurantCard resName={"Vegily Foods"} resRatings={"4.2 stars"} price={"300Rs for two"}/>
-        <RestaurantCard resName={"Momosa"} resRatings={"4.8 stars"} price={"250Rs for two"}/>
-        <RestaurantCard resName={"Meghna Kitchen"} resRatings={"4.9 stars"} price={"100Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
-        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Vegily Foods"} resRatings={"4.2 stars"} price={"300 Rs for two"}/>
+        <RestaurantCard resName={"Momosa"} resRatings={"4.8 stars"} price={"250 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Kitchen"} resRatings={"4.9 stars"} price={"100 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
+        <RestaurantCard resName={"Meghna Foods"} resRatings={"4.2 stars"} price={"200 Rs for two"}/>
       </div>
     </div>
   )
