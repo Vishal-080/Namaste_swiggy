@@ -64,6 +64,10 @@
   cursor: pointer;
 }
 
+.res-card:hover{
+  border: 2px solid cyan;
+}
+
 .res-img{
   width: 90%;
   height: 150px;
