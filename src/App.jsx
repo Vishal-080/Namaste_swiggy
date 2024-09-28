@@ -1,26 +1,5 @@
 import "./App.css";
-
-const Header = () => {
-  return (
-    <div className="Header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
-          alt="logo"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+import Header from './Components/Header';
 
 const RestaurantCard = (props) => {
   return (
@@ -75,9 +54,9 @@ const Body = () => {
           price={"200 Rs for two"}
         />
         <RestaurantCard
-          resName={"Meghna Foods"}
-          resRatings={"4.2 stars"}
-          price={"200 Rs for two"}
+          resName={"KFC"}
+          resRatings={"2.2 stars"}
+          price={"400 Rs for two"}
         />
         <RestaurantCard
           resName={"Meghna Foods"}
@@ -95,8 +74,8 @@ const Body = () => {
           price={"200 Rs for two"}
         />
         <RestaurantCard
-          resName={"Meghna Foods"}
-          resRatings={"4.2 stars"}
+          resName={"Indian Coffee House"}
+          resRatings={"5 stars"}
           price={"200Rs for two"}
         />
       </div>
