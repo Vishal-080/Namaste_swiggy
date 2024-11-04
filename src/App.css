@@ -67,6 +67,9 @@
 .res-card:hover{
   border: 2px solid cyan;
 }
+.res-name{
+  color: red;
+}
 
 .res-img{
   width: 90%;
