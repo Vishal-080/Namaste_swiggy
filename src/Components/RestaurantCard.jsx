@@ -1,9 +1,11 @@
+import RES_URL from "../utils/constants";
+
 const RestaurantCard = (props) => {
   return (
     <div className="res-card">
       <img
         className="res-img"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/xqwpuhgnsaf18te7zvtv"
+        src={RES_URL}
       />
       <h2 className="res-name">{props.resName}</h2>
       <h4>{props.resRatings}</h4>
