@@ -5,11 +5,13 @@ const Body = () => {
     <div className="body">
       <div className="search">
         <input
-          cl
           type="text"
           name="search"
           placeholder="Search Restaurants, Cusines, Dishes here..."
         />
+      </div>
+      <div className="filter">
+        <button className="filter-btn">Top Rated Restaurants</button>
       </div>
       <div className="res-container">
         <RestaurantCard
