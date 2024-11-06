@@ -101,3 +101,11 @@
   background-color: forestgreen;
   color: white;
 }
+
+.filter-btn{
+  padding: 10px;
+  margin: auto;
+  border-radius: 8px;
+  background-color: #000;
+  color: lime;
+}
