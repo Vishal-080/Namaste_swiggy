@@ -4,6 +4,13 @@
   text-align: center;
 } */
 
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
   height: 4em;
   will-change: filter;
@@ -104,8 +111,9 @@
 
 .filter-btn{
   padding: 10px;
-  margin: auto;
+  width: 250px;
   border-radius: 8px;
   background-color: #000;
   color: lime;
+  cursor: pointer;
 }
