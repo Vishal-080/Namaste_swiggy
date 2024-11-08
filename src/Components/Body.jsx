@@ -1,6 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
+
+  const handleFilter = () =>{
+    
+  }
+
   return (
     <div className="body">
       <div className="search">
@@ -11,7 +16,7 @@ const Body = () => {
         />
       </div>
       <div className="filter">
-        <button className="filter-btn">Top Rated Restaurants</button>
+        <button className="filter-btn" onClick={handleFilter} >Top Rated Restaurants</button>
       </div>
       <div className="res-container">
         <RestaurantCard
