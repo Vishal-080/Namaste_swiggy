@@ -1,10 +1,20 @@
+import { useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  const handleFilter = () =>{
-    
-  }
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.9352403&lng=77.624532&carousel=true&third_party_vendor=1"
+    );
+    const jsonData = await data.json();
+    console.log(jsonData, "fetched data in json");
+  };
+
+  const handleFilter = () => {};
 
   return (
     <div className="body">
@@ -16,7 +26,9 @@ const Body = () => {
         />
       </div>
       <div className="filter">
-        <button className="filter-btn" onClick={handleFilter} >Top Rated Restaurants</button>
+        <button className="filter-btn" onClick={handleFilter}>
+          Top Rated Restaurants
+        </button>
       </div>
       <div className="res-container">
         <RestaurantCard
