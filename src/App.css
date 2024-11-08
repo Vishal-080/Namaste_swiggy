@@ -76,7 +76,9 @@
 }
 .res-name{
   color: red;
-  font-size: medium;
+  padding: 8px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .res-img{

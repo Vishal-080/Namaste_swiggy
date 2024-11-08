@@ -1,15 +1,17 @@
 import RES_URL from "../utils/constants";
 
 const RestaurantCard = (props) => {
+  const { resData } = props;
+  console.log(resData, "res data   props");
   return (
     <div className="res-card">
       <img
         className="res-img"
-        src={RES_URL}
+        src={RES_URL+resData.info.cloudinaryImageId}
       />
-      <h2 className="res-name">{props.resName}</h2>
-      <h4>{props.resRatings}</h4>
-      <h4>{props.price}</h4>
+      <h2 className="res-name">{resData.info.name}</h2>
+      <h4>{resData.info.avgRating}</h4>
+      <h4>{resData.info.costForTwo}</h4>
       <button className="order-btn">Order Now</button>
     </div>
   );
