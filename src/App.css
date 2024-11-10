@@ -119,3 +119,19 @@
   color: lime;
   cursor: pointer;
 }
+
+.shimmer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:50px 20px;
+}
+
+.shimmer-card{
+  width: 250px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 15px;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}

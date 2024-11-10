@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-
-  console.log("list of res", listOfRestaurants);
 
   useEffect(() => {
     fetchData();
@@ -20,9 +19,11 @@ const Body = () => {
       jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
-    console.log(listOfRestaurants, "set list");
   };
 
+  if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body">
@@ -34,9 +35,7 @@ const Body = () => {
         />
       </div>
       <div className="filter">
-        <button className="filter-btn" >
-          Top Rated Restaurants
-        </button>
+        <button className="filter-btn">Top Rated Restaurants</button>
       </div>
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
