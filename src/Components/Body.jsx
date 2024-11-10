@@ -8,7 +8,6 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
-    console.log("useEffect ");
   }, []);
 
   const fetchData = async () => {
