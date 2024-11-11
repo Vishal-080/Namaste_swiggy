@@ -9,7 +9,6 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
-    console.log("hello  ");
   }, []);
 
   const fetchData = async () => {
@@ -30,11 +29,18 @@ const Body = () => {
   };
 
   const handleFilter = () => {
-   const filterRes =  listOfRestaurants.filter((res) => res?.info?.avgRating >= 4.3);
-   console.log(filterRes, "filterRes");
-   setFilteredRestaurant(filterRes);
-   setFilteredList(!false);
+    const filterRes = listOfRestaurants.filter(
+      (res) => res?.info?.avgRating >= 4.3
+    );
+    console.log(filterRes, "filterRes");
+    setFilteredRestaurant(filterRes);
+    setFilteredList(!false);
   };
+
+  const handleSearch = () => {
+    console.log("Search button clicked");
+  }
+
 
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
@@ -47,7 +53,7 @@ const Body = () => {
           className="search-box"
           placeholder="Search Restaurants, Cusines, Dishes here..."
         />
-        <button className="search-btn">🔍Search</button>
+        <button className="search-btn" onClick={handleSearch}>🔍Search</button>
       </div>
       <div className="filter">
         <button className="filter-btn" onClick={handleFilter}>
@@ -55,11 +61,13 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {filteredList ? (filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
-        ))) : (listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
-        )))}
+        {filteredList
+          ? filteredRestaurants.map((restaurant) => (
+              <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+            ))
+          : listOfRestaurants.map((restaurant) => (
+              <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+            ))}
       </div>
     </div>
   );
