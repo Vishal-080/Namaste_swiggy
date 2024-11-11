@@ -88,7 +88,7 @@
   border-radius: 8px;
 }
 
-.search > input{
+.search > input {
   padding: 10px;
   margin: 20px;
   background-color: aliceblue;
@@ -135,4 +135,11 @@
   margin: 15px;
   background-color: antiquewhite;
   border-radius: 8px;
+}
+.search-btn{
+  padding: 10px;
+  margin: 20px;
+  background-color: aliceblue;
+  border-radius: 8px 0 8px;
+  color: #000;
 }
