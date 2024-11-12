@@ -14,7 +14,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.9352403&lng=77.624532&carousel=true&third_party_vendor=1"
+      "https://www.swiggy.com/mapi/restaurants/list/v5?&lat=12.9352403&lng=77.624532&"
     );
 
     const jsonData = await data.json();
@@ -38,14 +38,17 @@ const Body = () => {
     setFilteredList(!false);
   };
 
-  const handleSearchText = (e) =>{
+  const handleSearchText = (e) => {
     setSearchText(e.target.value);
-  }
+  };
 
   const handleSearch = () => {
-    console.log("Search button clicked",searchText);
-  }
-
+    const filterSearchRes = listOfRestaurants.filter((res) =>
+      res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setListOfRestaurants(filterSearchRes);
+    console.log("Search button clicked", filterSearchRes);
+  };
 
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
@@ -60,7 +63,9 @@ const Body = () => {
           onChange={handleSearchText}
           placeholder="Search Restaurants, Cusines, Dishes here..."
         />
-        <button className="search-btn" onClick={handleSearch}>🔍Search</button>
+        <button className="search-btn" onClick={handleSearch}>
+          🔍Search
+        </button>
       </div>
       <div className="filter">
         <button className="filter-btn" onClick={handleFilter}>
