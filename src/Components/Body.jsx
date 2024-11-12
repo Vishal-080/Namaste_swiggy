@@ -6,6 +6,7 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurant] = useState([]);
   const [filteredList, setFilteredList] = useState(false);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -37,8 +38,12 @@ const Body = () => {
     setFilteredList(!false);
   };
 
+  const handleSearchText = (e) =>{
+    setSearchText(e.target.value);
+  }
+
   const handleSearch = () => {
-    console.log("Search button clicked");
+    console.log("Search button clicked",searchText);
   }
 
 
@@ -51,6 +56,8 @@ const Body = () => {
           type="text"
           name="search"
           className="search-box"
+          value={searchText}
+          onChange={handleSearchText}
           placeholder="Search Restaurants, Cusines, Dishes here..."
         />
         <button className="search-btn" onClick={handleSearch}>🔍Search</button>
