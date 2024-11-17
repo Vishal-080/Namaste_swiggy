@@ -1,9 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import AppLayout from "./App";
-import Header from "./Components/Header";
-import Body from "./Components/Body";
 import About from "./Components/About";
+import Contact from './Components/Contact';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 
@@ -11,18 +10,21 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    children: [
+      
+    ]
   },
   {
     path: "/home",
     element: <AppLayout />,
   },
   {
-    path: "/",
+    path: "/about",
     element: <About />,
   },
   {
-    path: "/about",
-    element: <About />,
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 
