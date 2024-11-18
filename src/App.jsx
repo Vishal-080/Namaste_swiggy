@@ -7,11 +7,9 @@ const AppLayout = () => {
   return (
     <>
       <Header />
-      < Outlet />
+      <Outlet />
     </>
   );
 };
-
-
 
 export default AppLayout;
