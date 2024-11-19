@@ -9,7 +9,7 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
-    console.log("component render");
+    // console.log("component render");
   }, []);
 
   const fetchData = async () => {
