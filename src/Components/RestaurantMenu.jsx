@@ -4,8 +4,8 @@ const RestaurantMenu = () => {
 
   const [menuData, setMenuData] = useState("");
 
-  const {name, cuisines, cloudinaryImageId, costForTwo} = menuData..data.cards[2].card.card.info;
-  
+  const {name, cuisines, cloudinaryImageId, costForTwo} = menuData.data.cards[2].card.card.info;
+
   useEffect(()=> {
     fetchMenu();
   },[]);
