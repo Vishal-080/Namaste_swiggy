@@ -13,14 +13,15 @@ const RestaurantMenu = () => {
     const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=393840&catalog_qa=undefined&submitAction=ENTER");
     const jsonMenuData = await data.json();
     console.log(jsonMenuData,"my menu data");
-    setMenuData(jsonMenuData);
+    setMenuData(jsonMenuData.data);
   }
 
   if(menuData === null ) return <Shimmer/>
 
   
-  const { name, cuisines, costForTwoMessage } = menuData?.data?.cards[2]?.card?.card?.info;
+  const { name, cuisines, costForTwoMessage } = menuData?.cards[2]?.card?.card?.info;
 
+  const {itemCards} = menuData;
 
   return (
     <div className="menu">
