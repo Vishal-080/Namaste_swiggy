@@ -5,9 +5,7 @@ const RestaurantMenu = () => {
 
   const [menuData, setMenuData] = useState(null);
 
-  useEffect(()=> {
-    fetchMenu();
-  },[]);
+ 
    
   const fetchMenu = async () => {
     const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=393840&catalog_qa=undefined&submitAction=ENTER");
@@ -21,7 +19,12 @@ const RestaurantMenu = () => {
   
   const { name, cuisines, costForTwoMessage } = menuData?.cards[2]?.card?.card?.info;
 
-  const {itemCards} = menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
+  const {itemCards} = menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
+
+  useEffect(()=> {
+    fetchMenu();
+    console.log(itemCards, "itemCards");
+  },[]);
   
 
   return (
