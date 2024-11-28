@@ -13,7 +13,6 @@ const RestaurantMenu = () => {
       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=393840&catalog_qa=undefined&submitAction=ENTER"
     );
     const jsonMenuData = await data.json();
-    // console.log(jsonMenuData.data, "my menu data");
     setMenuData(jsonMenuData.data);
   };
 
