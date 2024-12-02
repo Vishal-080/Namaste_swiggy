@@ -5,18 +5,14 @@ import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu = () => {
   const [menuData, setMenuData] = useState(null);
-  const { resID }  = useParams();
-
-
-
+  const { resId } = useParams();
+  
   useEffect(() => {
     fetchMenu();
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(
-      MENU_API+resID
-    );
+    const data = await fetch(MENU_API+resId);
     const jsonMenuData = await data.json();
     setMenuData(jsonMenuData.data);
   };
@@ -27,9 +23,12 @@ const RestaurantMenu = () => {
     menuData?.cards[2]?.card?.card?.info;
 
   const itemCardsData =
-    menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card?.card?.itemCards;
+    menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards ||
+    menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card
+      ?.card?.itemCards;
 
-      // console.log(menuData, "itemCardsData")
+  // console.log(menuData, "itemCardsData")
   return (
     <div className="menu">
       <h2>{name}</h2>
@@ -41,7 +40,11 @@ const RestaurantMenu = () => {
           {itemCardsData.map((items) => (
             <ul>
               {console.log(items.card.info.id, "unique id")}
-              <li key={items.card.info.id}>{items?.card?.info?.name} - {items?.card?.info?.price/100+"₹" || items?.card?.info?.defaultPrice/100+"₹" }</li>
+              <li key={items.card.info.id}>
+                {items?.card?.info?.name} -{" "}
+                {items?.card?.info?.price / 100 + "₹" ||
+                  items?.card?.info?.defaultPrice / 100 + "₹"}
+              </li>
             </ul>
           ))}
         </span>
