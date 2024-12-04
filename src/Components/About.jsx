@@ -1,10 +1,11 @@
 import React from "react";
+import User from "./User";
 
 const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <p>Info about team members</p>
+      <User name={"Vishal Rathod"}/>
     </div>
   );
 };
