@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <User name={"Vishal Rathod"} loc={"Indore, India"}/>
+      <User name={"Vishal Rathod"} loc={"Indore, India"} />
     </div>
   );
 };
