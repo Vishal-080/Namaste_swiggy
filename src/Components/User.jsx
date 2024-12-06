@@ -8,7 +8,7 @@ const User = ({props}) => {
   return (
     <div className="user-card">
       <h2>Name: {props}</h2>
-      <h3>Loaction: {}</h3>
+      <h3>Loaction: {props}</h3>
       <h4>Contact No:- 9998887776</h4>
     </div>
   );
