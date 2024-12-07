@@ -9,7 +9,7 @@ const User = ({props}) => {
     <div className="user-card">
       <h2>Name: {props}</h2>
       <h3>Loaction: {props}</h3>
-      <h4>Contact No:- 9998887776</h4>
+      <h4>Contact No:- {props}</h4>
     </div>
   );
 };
