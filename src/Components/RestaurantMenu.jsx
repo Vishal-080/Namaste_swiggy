@@ -24,11 +24,13 @@ const RestaurantMenu = () => {
 
   const itemCardsData =
     menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards || menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+      ?.itemCards || menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
       ?.itemCards ||
     menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card
       ?.card?.itemCards;
 
-  // console.log(menuData, "itemCardsData")
+  console.log(menuData, "itemCardsData")
   return (
     <div className="menu">
       <h2>{name}</h2>
