@@ -34,7 +34,7 @@ const RestaurantMenu = () => {
     menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards;
 
-  console.log(menuData, "itemCardsData");
+  // console.log(menuData, "itemCardsData");
 
   return (
     <div className="menu">
