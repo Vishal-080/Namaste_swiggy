@@ -52,6 +52,7 @@ const RestaurantMenu = () => {
                 {items?.card?.info?.defaultPrice / 100 + " ₹" ||
                   items?.card?.info?.price / 100 + "₹"}
               </li>
+              <li>{items}</li>
             </ul>
           ))}
         </span>
