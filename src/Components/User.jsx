@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const User = ({props}) => {
 
 
+  const [user, setUser] = useState("");
   // const {userName} = props;
 
   return (
