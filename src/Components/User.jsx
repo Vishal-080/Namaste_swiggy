@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const User = ({props}) => {
 
 
-  const [user, setUser] = useState("Vishal");
+  const [user, setUser] = useState("Vishal Rathod");
   // const {userName} = props;
 
   return (
