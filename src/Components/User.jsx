@@ -1,19 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const User = (props) => {
   const [userInfo, setUserInfo] = useState({
-    userName: "vishal",
-    loc: "mumbai",
-    num: "777888999",
+    name: "vishal",
+    location: "mumbai",
+    company: "777888999",
   });
 
-  const { userName, loc, num } = props;
+
+  useEffect(()=>{
+    fetchUserInfo();
+  },[]);
+
+  const fetchUserInfo = async () =>{
+    const userData = await fetch("https://api.github.com/users/Vishal-080");
+    const jsonUserData = await userData.json();
+    setUserInfo(jsonUserData);
+  }
+
+  const { name, location, company } = userInfo;
 
   return (
     <div className="user-card">
-      <h2>Name:- {userInfo.userName}</h2>
-      <h3>Location:- {userInfo.loc}</h3>
-      <h4>Contact No:- {userInfo.num}</h4>
+      <img src={userInfo.avatar_url} alt="image"  />
+      <h2>Name :- {name}</h2>
+      <h3>Location :- {location}</h3>
+      <h4>Contact No :- {company}</h4>
     </div>
   );
 };

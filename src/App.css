@@ -157,7 +157,14 @@
 }
 
 .user-card{
-  border: 1px solid limegreen;
+  /* border: 1px solid limegreen; */
   text-align: center;
   padding: 20px 0;
+}
+
+.user-card>img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 12px solid skyblue;
 }
