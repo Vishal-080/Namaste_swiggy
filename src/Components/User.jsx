@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-const User = ({props}) => {
-
-
+const User = ({ props }) => {
   const [user, setUser] = useState("Vishal Rathod");
   // const {userName} = props;
 
