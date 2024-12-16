@@ -151,3 +151,13 @@
   text-decoration: none;
   color: #000;
 }
+
+.about{
+  text-align: center;
+}
+
+.user-card{
+  border: 1px solid limegreen;
+  text-align: center;
+  padding: 20px 0;
+}
