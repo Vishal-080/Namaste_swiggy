@@ -7,22 +7,21 @@ const User = (props) => {
     company: "777888999",
   });
 
-
-  useEffect(()=>{
+  useEffect(() => {
     fetchUserInfo();
-  },[]);
+  }, []);
 
-  const fetchUserInfo = async () =>{
+  const fetchUserInfo = async () => {
     const userData = await fetch("https://api.github.com/users/Vishal-080");
     const jsonUserData = await userData.json();
     setUserInfo(jsonUserData);
-  }
+  };
 
   const { name, location, company } = userInfo;
 
   return (
     <div className="user-card">
-      <img src={userInfo.avatar_url} alt="image"  />
+      <img src={userInfo.avatar_url} alt="image" />
       <h2>Name :- {name}</h2>
       <h3>Location :- {location}</h3>
       <h4>Contact No :- {company}</h4>
