@@ -1,8 +1,8 @@
 import React from 'react';
 
-const useRestaurantMenu = () => {
+const useRestaurantMenu = (props) => {
   return (
-    <div>useRestaurantMenu</div>
+    <div></div>
   )
 }
 
