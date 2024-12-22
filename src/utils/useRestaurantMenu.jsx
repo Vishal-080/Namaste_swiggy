@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const useRestaurantMenu = (props) => {
+
+  const [resInfo, setResInfo] = useState("");
+  
   return (
     <div></div>
   )
