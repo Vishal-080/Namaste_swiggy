@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const useRestaurantMenu = (props) => {
+const useRestaurantMenu = (resId) => {
 
   const [resInfo, setResInfo] = useState("");
   
