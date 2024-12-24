@@ -6,7 +6,6 @@ const useRestaurantMenu = (resId) => {
   
   
   return (
-    <div></div>
   )
 }
 
