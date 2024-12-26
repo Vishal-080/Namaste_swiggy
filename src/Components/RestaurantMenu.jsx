@@ -5,11 +5,11 @@ import { MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  // const [resInfo, setresInfo] = useState(null);
   const { resId } = useParams();
   const  resInfo  = useRestaurantMenu(resId);
 
-  console.log(resInfo?.cards[2],"res info menu");
+  // const [resInfo, setresInfo] = useState(null);
+  // console.log(resInfo?.cards[2],"res info menu");
   // useEffect(() => {
   //   fetchMenu();
   // }, []);
@@ -48,14 +48,13 @@ const RestaurantMenu = () => {
         LIST OR DISHES :-
         <span>
           {itemCardsData.map((items) => (
-            <ul>
-              {console.log(items.card.info.id, "unique id")}
-              <li key={items.card.info.id}>
+            <ul key={items?.card?.info?.id}>
+              {console.log(items?.card?.info?.id, "unique id")}
+              <li key={items?.card?.info?.id}>
                 {items?.card?.info?.name} -{" "}
                 {items?.card?.info?.defaultPrice / 100 + " ₹" ||
                   items?.card?.info?.price / 100 + "₹"}
               </li>
-              <li>{items}</li>
             </ul>
           ))}
         </span>
