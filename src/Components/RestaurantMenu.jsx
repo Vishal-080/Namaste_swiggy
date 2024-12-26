@@ -5,37 +5,39 @@ import { MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [menuData, setMenuData] = useState(null);
+  // const [resInfo, setresInfo] = useState(null);
   const { resId } = useParams();
+  const  resInfo  = useRestaurantMenu(resId);
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  console.log(resInfo?.cards[2],"res info menu");
+  // useEffect(() => {
+  //   fetchMenu();
+  // }, []);
 
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
-    const jsonMenuData = await data.json();
-    setMenuData(jsonMenuData.data);
-  };
+  // const fetchMenu = async () => {
+  //   const data = await fetch(MENU_API + resId);
+  //   const jsonresInfo = await data.json();
+  //   setresInfo(jsonresInfo.data);
+  // };
 
-  if (menuData === null) return <Shimmer />;
+  if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwoMessage } =
-    menuData?.cards[2]?.card?.card?.info;
+    resInfo?.cards[2]?.card?.card?.info;
 
   const itemCardsData =
-    menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards ||
-    menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
       ?.itemCards ||
-    menuData?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card
       ?.card?.itemCards;
-  menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+  resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
     ?.itemCards ||
-    menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards;
 
-  // console.log(menuData, "itemCardsData");
+  console.log(resInfo, "itemCardsData");
 
   return (
     <div className="menu">
