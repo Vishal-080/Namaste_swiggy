@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Shimmer from "../Components/Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../utils/constants";
+import { RES_IMG_URL } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  const  resInfo  = useRestaurantMenu(resId);
+  const resInfo = useRestaurantMenu(resId);
 
   // const [resInfo, setresInfo] = useState(null);
   // console.log(resInfo?.cards[2],"res info menu");
@@ -22,7 +22,7 @@ const RestaurantMenu = () => {
 
   if (resInfo === null) return <Shimmer />;
 
-  const { name, cuisines, costForTwoMessage } =
+  const { name, cuisines, costForTwoMessage, cloudinaryImageId } =
     resInfo?.cards[2]?.card?.card?.info;
 
   const itemCardsData =
@@ -30,8 +30,8 @@ const RestaurantMenu = () => {
       ?.itemCards ||
     resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
       ?.itemCards ||
-    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card
-      ?.card?.itemCards;
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card?.card
+      ?.itemCards;
   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
     ?.itemCards ||
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
@@ -41,24 +41,26 @@ const RestaurantMenu = () => {
 
   return (
     <div className="menu">
+      <img src={RES_IMG_URL + cloudinaryImageId} alt="res_img" />
       <h2>{name}</h2>
-      <h3>{cuisines.join(" | ")}</h3>
-      <h3>{costForTwoMessage}</h3>
-      <h4>
+      <p>
+        {cuisines.join(" | ")} &nbsp; <span>{costForTwoMessage}</span>
+      </p>
+      &nbsp;
+      <h5>
         LIST OR DISHES :-
-        <span>
-          {itemCardsData.map((items) => (
-            <ul key={items?.card?.info?.id}>
-              {console.log(items?.card?.info?.id, "unique id")}
-              <li key={items?.card?.info?.id}>
-                {items?.card?.info?.name} -{" "}
-                {items?.card?.info?.defaultPrice / 100 + " ₹" ||
-                  items?.card?.info?.price / 100 + "₹"}
-              </li>
-            </ul>
-          ))}
-        </span>
-      </h4>
+        {/* <span> */}
+        {itemCardsData.map((items) => (
+          <ul>
+            <li key={items?.card?.info?.id}>
+              {items?.card?.info?.name} -{" "}
+              {items?.card?.info?.defaultPrice / 100 + " ₹" ||
+                items?.card?.info?.price / 100 + "₹"}
+            </li>
+          </ul>
+        ))}
+        {/* </span> */}
+      </h5>
     </div>
   );
 };
