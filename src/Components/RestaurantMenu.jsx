@@ -49,7 +49,6 @@ const RestaurantMenu = () => {
       &nbsp;
       <h5>
         LIST OR DISHES :-
-        {/* <span> */}
         {itemCardsData.map((items) => (
           <ul>
             <li key={items?.card?.info?.id}>
@@ -59,7 +58,6 @@ const RestaurantMenu = () => {
             </li>
           </ul>
         ))}
-        {/* </span> */}
       </h5>
     </div>
   );
