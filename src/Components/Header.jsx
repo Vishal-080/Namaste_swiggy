@@ -3,10 +3,9 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import { useState } from "react";
 
 const Header = () => {
+  const status = useOnlineStatus();
 
-  const status = useOnlineStatus(); 
-
-  console.log(status,"hey status")
+  console.log(status, "hey status");
   return (
     <div className="Header">
       <div className="logo-container">
@@ -18,7 +17,13 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>{status ? <div className="status-online"></div> : <div className="status-offline"></div>}</li>
+          <li>
+            {status ? (
+              <div className="status-online"></div>
+            ) : (
+              <div className="status-offline"></div>
+            )}
+          </li>
           <li>
             <Link to="/">Home</Link>
           </li>
