@@ -15,10 +15,10 @@ const Header = () => {
           src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
           alt="logo"
         />
-        {status ? <div className="status"></div> : ""}
       </div>
       <div className="nav-items">
         <ul>
+          <li>{status ? <div className="status-online"></div> : <div className="status-offline"></div>}</li>
           <li>
             <Link to="/">Home</Link>
           </li>

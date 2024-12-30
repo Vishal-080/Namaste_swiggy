@@ -32,6 +32,23 @@
   padding: 0 10px;
 }
 
+.status-online{
+  background: lawngreen;
+  border: 5px solid lime;
+  border-radius: 50%;
+  width: 24px;
+  height:24px;
+  margin: auto;
+}
+
+.status-offline{
+  background: red;
+  border: 5px solid orange;
+  border-radius: 50%;
+  width: 24px;
+  height:24px;
+  margin: auto;
+}
 .nav-items > ul{
   display: flex;
   padding: 4px;
