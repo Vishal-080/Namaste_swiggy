@@ -24,7 +24,7 @@ const User = (props) => {
       <img src={userInfo.avatar_url} alt="image" />
       <h2>Name :- {name}</h2>
       <h3>Location :- {location}</h3>
-      <h4>Contact No :- {company}</h4>
+      <h4>Company :- {company}</h4>
     </div>
   );
 };
