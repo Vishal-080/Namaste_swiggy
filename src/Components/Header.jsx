@@ -5,7 +5,7 @@ import { useState } from "react";
 const Header = () => {
   const status = useOnlineStatus();
 
-  console.log(status, "hey status");
+  // console.log(status, "hey status");
   return (
     <div className="Header">
       <div className="logo-container">
