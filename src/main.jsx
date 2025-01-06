@@ -1,4 +1,4 @@
-import { StrictMode , lazy, Suspense } from "react";
+import { StrictMode, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import AppLayout from "./App";
 import About from "./Components/About";
@@ -9,7 +9,7 @@ import "./index.css";
 import RestaurantMenu from "./Components/RestaurantMenu";
 // import Grocery from "./Components/Grocery";
 
-const Grocery = lazy(()=> import("./Components/Grocery"));
+const Grocery = lazy(() => import("./Components/Grocery"));
 
 const appRouter = createBrowserRouter([
   {
@@ -27,13 +27,18 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
-      },{
+      },
+      {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
       },
       {
         path: "/grocery",
-        element: <Suspense><Grocery /></Suspense>,
+        element: (
+          <Suspense>
+            <Grocery />
+          </Suspense>
+        ),
       },
     ],
   },
