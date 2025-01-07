@@ -10,7 +10,7 @@ import RestaurantMenu from "./Components/RestaurantMenu";
 // import Grocery from "./Components/Grocery";
 
 const Grocery = lazy(() => import("./Components/Grocery"));
-const About = lazy(()=> import("./Components/About"));
+const About = lazy(() => import("./Components/About"));
 
 const appRouter = createBrowserRouter([
   {
@@ -23,7 +23,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <Suspense><About /></Suspense>,
+        element: (
+          <Suspense>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
