@@ -35,7 +35,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/grocery",
         element: (
-          <Suspense>
+          <Suspense fallback={<h1>Loading...</h1>}>
             <Grocery />
           </Suspense>
         ),
