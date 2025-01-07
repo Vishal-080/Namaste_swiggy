@@ -1,7 +1,7 @@
 import { StrictMode, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import AppLayout from "./App";
-import About from "./Components/About";
+// import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Body from "./Components/Body";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -10,6 +10,7 @@ import RestaurantMenu from "./Components/RestaurantMenu";
 // import Grocery from "./Components/Grocery";
 
 const Grocery = lazy(() => import("./Components/Grocery"));
+const About = lazy(()=> import("./Components/About"));
 
 const appRouter = createBrowserRouter([
   {
