@@ -23,7 +23,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: <Suspense><About /></Suspense>,
       },
       {
         path: "/contact",
