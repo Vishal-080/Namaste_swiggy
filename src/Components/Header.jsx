@@ -8,29 +8,29 @@ const Header = () => {
   // console.log(status, "hey status");
   return (
     <div className="flex justify-between items-center text-black bg-[#00ffff] px-3">
-      <div className="logo-container">
+      <div>
         <img
-          className="logo"
+          className="h-16"
           src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
           alt="logo"
         />
       </div>
       <div className="nav-items">
-        <ul>
-          <li>Online Status : {status ? "🟢" : "🔴"}</li>
-          <li>
+        <ul className="flex p-1 text-md font-medium">
+          <li  className="m-2.5 p-1">Online Status : {status ? "🟢" : "🔴"}</li>
+          <li className="m-2.5 p-1">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="m-2.5 p-1">
             <Link to="/about">About Us</Link>
           </li>
-          <li>
+          <li className="m-2.5 p-1">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>
+          <li className="m-2.5 p-1">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
+          <li className="m-2.5 p-1">Cart</li>
         </ul>
       </div>
     </div>
