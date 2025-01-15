@@ -7,7 +7,7 @@ const Header = () => {
 
   // console.log(status, "hey status");
   return (
-    <div className="Header flex justify-between items-center text-black">
+    <div className="Header flex justify-between items-center text-black bg-[0,255,255] px-3">
       <div className="logo-container">
         <img
           className="logo"
