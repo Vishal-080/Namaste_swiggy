@@ -17,7 +17,7 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul className="flex p-1 text-md font-medium">
-          <li  className="m-2.5 p-1">Online Status : {status ? "🟢" : "🔴"}</li>
+          <li className="m-2.5 p-1">Online Status : {status ? "🟢" : "🔴"}</li>
           <li className="m-2.5 p-1">
             <Link to="/">Home</Link>
           </li>
