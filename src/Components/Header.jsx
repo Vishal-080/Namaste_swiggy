@@ -31,6 +31,7 @@ const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className="m-2.5 p-1">Cart</li>
+          <li className="m-2.5 p-1">Login</li>
         </ul>
       </div>
     </div>
