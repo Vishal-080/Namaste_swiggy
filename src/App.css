@@ -88,13 +88,13 @@
   border-radius: 8px;
 }
 
-.search > input {
+/* .search > input {
   padding: 10px;
   margin: 20px;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   border-radius: 8px 0 8px;
   color: #000;
-}
+} */
 
 .order-btn{
   background-color: lightgreen;

@@ -58,12 +58,15 @@ const Body = () => {
         <input
           type="text"
           name="search"
-          className="search-box"
+          className="p-2.5 m-5 bg-[#f0f8ff] text-black rounded-tl-lg rounded-br-lg"
           value={searchText}
           onChange={handleSearchText}
           placeholder="Search Restaurants, Cusines, Dishes here..."
         />
-        <button className="search-btn" onClick={handleSearch}>
+        <button
+          className="p-2.5 m-5 bg-[#f0f8ff] text-black rounded-tl-lg rounded-br-lg"
+          onClick={handleSearch}
+        >
           🔍Search
         </button>
       </div>
