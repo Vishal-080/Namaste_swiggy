@@ -71,7 +71,7 @@ const Body = () => {
         </button>
       </div>
       <div className="filter">
-        <button className="filter-btn" onClick={handleFilter}>
+        <button className="p-2.5 w-60 bg-black text-lime-300 cursor-pointer rounded-lg" onClick={handleFilter}>
           Top Rated Restaurants
         </button>
       </div>
