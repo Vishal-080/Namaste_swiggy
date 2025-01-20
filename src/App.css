@@ -74,19 +74,20 @@
 /* .res-card:hover{
   border: 2px solid cyan;
 } */
-.res-name{
+
+/* .res-name{
   color: red;
   padding: 8px;
   font-size: 20px;
   line-height: 20px;
-}
+} */
 
-.res-img{
+/* .res-img{
   width: 90%;
   height: 150px;
   object-fit: none;
   border-radius: 8px;
-}
+} */
 
 /* .search > input {
   padding: 10px;
@@ -97,7 +98,7 @@
 } */
 
 .order-btn{
-  background-color: lightgreen;
+  background-color: #5eff5e;
   color: #000;
   border-radius: 8px;
   padding: 6px;
