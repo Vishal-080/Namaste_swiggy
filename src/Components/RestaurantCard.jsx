@@ -3,7 +3,7 @@ import RES_URL from "../utils/constants";
 const RestaurantCard = (props) => {
   const { resData } = props;
   return (
-    <div className="flex w-60 h-96 border border-black border-solid p-2 m-5 flex-col justify-center items-center text-center bg-[#faebd7] rounded-lg text-black cursor-pointer hover:border-8 hover:border-solid hover:border-lime-500">
+    <div className="flex w-60 h-[500px] border border-black border-solid p-2 m-5 flex-col justify-center items-center text-center bg-[#faebd7] rounded-lg text-black cursor-pointer hover:border-8 hover:border-solid hover:border-lime-500">
       <img
         className="my-4 object-none rounded-lg h-44"
         src={RES_URL + resData?.info?.cloudinaryImageId}
