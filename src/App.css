@@ -136,17 +136,19 @@
   background-color: antiquewhite;
   border-radius: 8px;
 }
-.search-btn{
+
+/* .search-btn{
   padding: 10px;
   margin: 20px;
   background-color: aliceblue;
   border-radius: 8px 0 8px;
   color: #000;
-}
+} */
 
 .nav-items>ul {
   cursor: pointer;
 }
+
 .nav-items>ul>li>a {
   text-decoration: none;
   color: #000;
