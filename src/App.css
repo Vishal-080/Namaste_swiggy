@@ -111,14 +111,14 @@
   color: white;
 }
 
-.filter-btn{
+/* .filter-btn{
   padding: 10px;
   width: 250px;
   border-radius: 8px;
   background-color: #000;
   color: lime;
   cursor: pointer;
-}
+} */
 
 .shimmer-container{
   display: flex;
