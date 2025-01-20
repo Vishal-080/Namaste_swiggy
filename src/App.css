@@ -46,14 +46,14 @@
   padding: 4px;
 } */
 
-.res-container{
+/* .res-container{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 
-.res-card{
+/* .res-card{
   width: 250px;
   height: 400px;
   border: 1px solid black;
@@ -69,11 +69,11 @@
   color: #000;
   line-height: 4px;
   cursor: pointer;
-}
+} */
 
-.res-card:hover{
+/* .res-card:hover{
   border: 2px solid cyan;
-}
+} */
 .res-name{
   color: red;
   padding: 8px;
