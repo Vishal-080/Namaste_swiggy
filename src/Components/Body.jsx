@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { isPromoted } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,10 @@ const Body = () => {
     );
 
     const jsonData = await data.json();
-
+    
+    console.log(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+      ?.restaurants);
+      
     setListOfRestaurants(
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
