@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard, { isPromoted } from "./RestaurantCard";
+import RestaurantCard, { isOpen } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
@@ -21,9 +21,8 @@ const Body = () => {
 
     const jsonData = await data.json();
     
-    console.log(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-      ?.restaurants);
-      
+   
+
     setListOfRestaurants(
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
@@ -84,6 +83,7 @@ const Body = () => {
             to={"/restaurant/" + restaurant?.info?.id}
             key={restaurant?.info?.id}
           >
+            {console.log(restaurant, "is promoted")}
             <RestaurantCard resData={restaurant} />
           </Link>
         ))}

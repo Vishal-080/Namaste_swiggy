@@ -20,10 +20,10 @@ const RestaurantCard = (props) => {
   );
 };
 
-const isPromoted = (RestaurantCard) => {
+export const isOpen = (RestaurantCard) => {
   return ()=>{
     return (<>
-      <label>Promoted</label>
+      <label>Open Now</label>
       <RestaurantCard/>
     </>)
   }
