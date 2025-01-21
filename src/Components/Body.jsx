@@ -8,6 +8,8 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardIsOpen = isOpen(RestaurantCard);
+
   useEffect(() => {
     fetchData();
     // console.log("component render");
@@ -20,8 +22,6 @@ const Body = () => {
     );
 
     const jsonData = await data.json();
-    
-   
 
     setListOfRestaurants(
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
@@ -73,7 +73,10 @@ const Body = () => {
         </button>
       </div>
       <div className="filter">
-        <button className="p-2.5 w-60 bg-black text-lime-300 cursor-pointer rounded-lg" onClick={handleFilter}>
+        <button
+          className="p-2.5 w-60 bg-black text-lime-300 cursor-pointer rounded-lg"
+          onClick={handleFilter}
+        >
           Top Rated Restaurants
         </button>
       </div>
@@ -83,8 +86,11 @@ const Body = () => {
             to={"/restaurant/" + restaurant?.info?.id}
             key={restaurant?.info?.id}
           >
-            {console.log(restaurant, "is promoted")}
-            <RestaurantCard resData={restaurant} />
+            {!restaurant.info.isOpen ? (
+              <RestaurantCardIsOpen resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
