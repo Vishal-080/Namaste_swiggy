@@ -86,7 +86,7 @@ const Body = () => {
             to={"/restaurant/" + restaurant?.info?.id}
             key={restaurant?.info?.id}
           >
-            {!restaurant.info.isOpen ? (
+            {restaurant.info.isOpen ? (
               <RestaurantCardIsOpen resData={restaurant} />
             ) : (
               <RestaurantCard resData={restaurant} />

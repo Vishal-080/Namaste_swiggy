@@ -21,10 +21,10 @@ const RestaurantCard = (props) => {
 };
 
 export const isOpen = (RestaurantCard) => {
-  return ()=>{
+  return (props)=>{
     return (<>
-      <label>Open Now</label>
-      <RestaurantCard/>
+      <label className="p-1 rounded-lg z-10 relative left-5 top-12 bg-black hover:text-lime-400">Open Now</label>
+      <RestaurantCard {...props}/>
     </>)
   }
 
