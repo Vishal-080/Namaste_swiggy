@@ -40,10 +40,10 @@ const RestaurantMenu = () => {
   // console.log(resInfo, "itemCardsData");
 
   return (
-    <div className="menu">
-      <img src={RES_IMG_URL + cloudinaryImageId} alt="res_img" />
-      <h2>{name}</h2>
-      <p>
+    <div className="mt-8 w-6/12 text-center m-auto border border-solid border-black">
+      <img src={RES_IMG_URL + cloudinaryImageId} alt="res_img" className="w-64 m-auto" />
+      <p className="font-bold text-2xl my-4">{name}</p>
+      <p className="font-semibold text-md my-2">
         {cuisines.join(" | ")} &nbsp; <span>{costForTwoMessage}</span>
       </p>
       &nbsp;
