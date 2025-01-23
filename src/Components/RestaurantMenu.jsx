@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
   const resInfo = useRestaurantMenu(resId);
 
   // const [resInfo, setresInfo] = useState(null);
-  // console.log(resInfo?.cards[2],"res info menu");
+  console.log(resInfo,"res info");
   // useEffect(() => {
   //   fetchMenu();
   // }, []);
@@ -51,7 +51,7 @@ const RestaurantMenu = () => {
         {cuisines.join(" | ")} &nbsp; <span>{costForTwoMessage}</span>
       </p>
       &nbsp;
-      <h5>
+    {/*  <h5>
         LIST OR DISHES :-
         {itemCardsData.map((items) => (
           <ul>
@@ -62,7 +62,7 @@ const RestaurantMenu = () => {
             </li>
           </ul>
         ))}
-      </h5>
+      </h5> */}
     </div>
   );
 };
