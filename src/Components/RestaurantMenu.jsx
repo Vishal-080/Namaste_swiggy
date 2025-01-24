@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
   const resInfo = useRestaurantMenu(resId);
 
   // const [resInfo, setresInfo] = useState(null);
-  console.log(resInfo,"res info");
+  console.log(resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards,"res info");
   // useEffect(() => {
   //   fetchMenu();
   // }, []);
