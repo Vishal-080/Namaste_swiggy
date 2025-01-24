@@ -1,4 +1,4 @@
-import RES_URL from "../utils/constants";
+import { RES_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
