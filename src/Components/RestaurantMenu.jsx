@@ -7,9 +7,10 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
+  const categories = resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory");
 
   // const [resInfo, setresInfo] = useState(null);
-  console.log(resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards,"res info");
+  console.log(categories,"res info");
   // useEffect(() => {
   //   fetchMenu();
   // }, []);
@@ -51,6 +52,7 @@ const RestaurantMenu = () => {
         {cuisines.join(" | ")} &nbsp; <span>{costForTwoMessage}</span>
       </p>
       &nbsp;
+      
     {/*  <h5>
         LIST OR DISHES :-
         {itemCardsData.map((items) => (
