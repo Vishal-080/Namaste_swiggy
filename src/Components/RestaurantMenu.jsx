@@ -11,7 +11,7 @@ const RestaurantMenu = () => {
   const categories = resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" || c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 
   // const [resInfo, setresInfo] = useState(null);
-  
+
   // console.log(categories,"res info");
 
   // useEffect(() => {
@@ -69,7 +69,11 @@ const RestaurantMenu = () => {
         ))}
       </h5> */}
 
-      <RestaurantCategory data={categories}/>
+      {
+        categories.map((category)=>(
+          <RestaurantCategory data={category?.card.card}/>
+        ))
+      }
     </div>
   );
 };

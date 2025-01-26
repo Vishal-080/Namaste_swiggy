@@ -5,11 +5,7 @@ const RestaurantCategory = ({data}) => {
   // console.log(data[0]);
   return (
     <div>
-      {data.map((item)=>{
-        return <>
-        <div className='border-b-2 m-4 p-2 flex justify-between items-center'>{item.card.card.title} <span>🔽</span></div>
-        </>
-      })}
+       <div className='border-b-2 m-4 p-2 flex justify-between items-center cursor-pointer'>{data.title} <span>🔽</span></div>
     </div>
   )
 }
