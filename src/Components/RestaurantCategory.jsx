@@ -7,7 +7,7 @@ const RestaurantCategory = ({data}) => {
     <div>
       {data.map((item)=>{
         return <>
-        <div className='border-b-2 m-4 p-2 '>{item.card.card.title} <span>🔽</span></div>
+        <div className='border-b-2 m-4 p-2 flex justify-between items-center'>{item.card.card.title} <span>🔽</span></div>
         </>
       })}
     </div>
