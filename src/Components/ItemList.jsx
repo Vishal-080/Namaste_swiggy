@@ -1,7 +1,8 @@
 import React from "react";
 
-const ItemList = () => {
-  return <div>ItemList</div>;
+const ItemList = ({items}) => {
+  // console.log(items," item list")
+  return <div>{items?.card?.info?.name}</div>;
 };
 
 export default ItemList;
