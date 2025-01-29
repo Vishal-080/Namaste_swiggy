@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ItemList = () => {
-  return (
-    <div>ItemList</div>
-  )
-}
+  return <div>ItemList</div>;
+};
 
 export default ItemList;
