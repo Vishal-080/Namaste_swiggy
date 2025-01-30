@@ -8,7 +8,7 @@ const ItemList = ({ items }) => {
     <div >
       {items.map((item) => (
         <div className="border-b-2 m-2 p-2 flex justify-between" key={item.card.info.id}>
-          <p>{item?.card?.info?.name}</p>
+          <p className="text-sm font-semibold">{item?.card?.info?.name}</p>
           <span>Rs. {item?.card?.info?.price/100 || item?.card?.info?.defaultPrice/100
           } ₹ </span>
         </div>
