@@ -1,7 +1,9 @@
 import React from "react";
 
 const ItemList = ({ items }) => {
-  console.log(items, "items");
+  
+  console.log(items[0]?.card.info.name,"items");
+
   return (
     <div>
       {items.map((item) => (
