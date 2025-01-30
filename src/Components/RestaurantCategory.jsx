@@ -6,7 +6,7 @@ const RestaurantCategory = ({ data }) => {
   return (
     <div>
       {data?.itemCards?.length ? (
-        <div className="border-b-2 m-4 p-2 cursor-pointer">
+        <div className="m-4 p-4 cursor-pointer">
           <div className="m-2 p-1 text-left flex justify-between items-center">
             <div className="font-semibold text-lg">
               {data?.title} ({data?.itemCards?.length})
