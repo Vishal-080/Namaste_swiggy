@@ -4,6 +4,10 @@ import { RES_URL } from "../utils/constants";
 const ItemList = ({ items }) => {
   // console.log(items, "items");
 
+  const HandleAddClick = () => {
+    console.log("Add to Cart clicked");
+  };
+
   return (
     <div>
       {items.map((item) => (
@@ -30,6 +34,12 @@ const ItemList = ({ items }) => {
           </div>
           <div className="w-3/12">
             <img src={RES_URL + item?.card?.info?.imageId} alt="res_img" />
+            <button
+              className="rounded-lg bg-white text-black px-2 relative cursor-pointer"
+              onClick={HandleAddClick}
+            >
+              Add +
+            </button>
           </div>
         </div>
       ))}
