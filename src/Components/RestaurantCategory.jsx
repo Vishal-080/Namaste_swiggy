@@ -20,7 +20,9 @@ const RestaurantCategory = ({ data }) => {
           </div>
           {data?.itemCards?.length ? <ItemList items={data?.itemCards} /> : ""}
         </div>
-      ) : ( "" )}
+      ) : (
+        ""
+      )}
     </div>
   );
 };
