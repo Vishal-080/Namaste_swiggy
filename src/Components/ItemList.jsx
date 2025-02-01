@@ -32,10 +32,10 @@ const ItemList = ({ items }) => {
               <p>{item?.card?.info?.description}</p>
             </div>
           </div>
-          <div className="w-3/12">
+          <div className="w-3/12 flex flex-col justify-between items-center">
             <img src={RES_URL + item?.card?.info?.imageId} alt="res_img" />
             <button
-              className="rounded-lg bg-white text-black px-2 relative cursor-pointer"
+              className="rounded-lg bg-white text-black px-3 relative cursor-pointer"
               onClick={HandleAddClick}
             >
               Add +
