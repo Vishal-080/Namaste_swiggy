@@ -3,6 +3,11 @@ import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data }) => {
   // console.log(data,"data   d");
+
+  const HandleClick = () => {
+    console.log("clicked");
+  };
+
   return (
     <div>
       {data?.itemCards?.length ? (
