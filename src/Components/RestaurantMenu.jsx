@@ -44,11 +44,12 @@ const RestaurantMenu = () => {
   // console.log(categories, "CardsData");
 
   return (
-    <div className="mt-8 w-6/12 text-center m-auto border border-solid border-black">
+    <div className="w-6/12 text-center m-auto bg-[#202020]">
+      {/* border border-solid border-black  */}
       <img
         src={RES_IMG_URL + cloudinaryImageId}
         alt="res_img"
-        className="w-64 m-auto"
+        className="w-64 m-auto mt-5"
       />
       <p className="font-bold text-2xl my-4">{name}</p>
       <p className="font-semibold text-md my-2">

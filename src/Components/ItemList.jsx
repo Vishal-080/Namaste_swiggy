@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
     <div>
       {items.map((item) => (
         <div
-          className="border-b-2 m-2 p-2 flex justify-between items-center"
+          className="border-b-4 m-4 p-2 flex justify-between items-center bg-[#353535] rounded-xl shadow-lg"
           key={item.card.info.id}
         >
           <div className="w-8/12">
