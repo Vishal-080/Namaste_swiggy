@@ -1,7 +1,8 @@
 import React from "react";
+import { RES_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
-  // console.log(items, "items");
+  console.log(items, "items");
 
   return (
     <div>
@@ -16,9 +17,10 @@ const ItemList = ({ items }) => {
               ₹{" "}
             </span>
           </div>
-          <div>
+          <div className="text-left text-xs py-2">
             <p>{item?.card?.info?.description}</p>
           </div>
+          <img src={RES_URL + item?.card?.info?.imageId} alt="res_img" />
         </div>
       ))}
     </div>

@@ -41,7 +41,7 @@ const RestaurantMenu = () => {
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards;
 
-  // console.log(resInfo, "itemCardsData");
+  // console.log(categories, "CardsData");
 
   return (
     <div className="mt-8 w-6/12 text-center m-auto border border-solid border-black">
@@ -71,7 +71,7 @@ const RestaurantMenu = () => {
 
       {
         categories.map((category)=>(
-          <RestaurantCategory key={category?.card?.card?.categoryId
+          <RestaurantCategory key={category?.card?.card?.title
           } data={category?.card?.card}/>
         ))
       }
