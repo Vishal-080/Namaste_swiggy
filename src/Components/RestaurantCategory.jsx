@@ -15,13 +15,20 @@ const RestaurantCategory = ({ data }) => {
     <div>
       {data?.itemCards?.length ? (
         <div className="m-4 p-4 ">
-          <div className="m-2 p-1 text-left flex justify-between items-center cursor-pointer" onClick={handleClick}>
+          <div
+            className="m-2 p-1 text-left flex justify-between items-center cursor-pointer"
+            onClick={handleClick}
+          >
             <div className="font-semibold text-lg">
               {data?.title} ({data?.itemCards?.length})
             </div>
             <span>🔽</span>
           </div>
-          {data?.itemCards?.length && showItemList ? <ItemList items={data?.itemCards} /> : ""}
+          {data?.itemCards?.length && showItemList ? (
+            <ItemList items={data?.itemCards} />
+          ) : (
+            ""
+          )}
         </div>
       ) : (
         ""
