@@ -4,7 +4,7 @@ import { RES_URL } from "../utils/constants";
 const ItemList = ({ items }) => {
   // console.log(items, "items");
 
-  const HandleAddClick = () => {
+  const handleAddClick = () => {
     console.log("Add to Cart clicked");
   };
 
@@ -36,7 +36,7 @@ const ItemList = ({ items }) => {
             <img src={RES_URL + item?.card?.info?.imageId} alt="res_img" />
             <button
               className="rounded-lg bg-white text-black px-3 relative cursor-pointer"
-              onClick={HandleAddClick}
+              onClick={handleAddClick}
             >
               Add +
             </button>
