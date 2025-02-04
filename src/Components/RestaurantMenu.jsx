@@ -8,7 +8,7 @@ import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
-  const [showItemList, setShowItemList] = useState(false);
+  // const [showItemList, setShowItemList] = useState(false);
 
   
   const categories = resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" || c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
@@ -76,7 +76,7 @@ const RestaurantMenu = () => {
       {
         categories.map((category)=>(
           <RestaurantCategory key={category?.card?.card?.title
-          } data={category?.card?.card} showItemList={false}/>
+          } data={category?.card?.card} showItemList={true}/>
         ))
       }
     </div>
