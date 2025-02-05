@@ -2,7 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 import { useState } from "react";
 
-const RestaurantCategory = ({ data, showItemList  }) => {
+const RestaurantCategory = ({ data, showItemList }) => {
   // console.log(data,"data   d");
   // const [showItemList, setShowItemList] = useState(false);
 
@@ -12,7 +12,7 @@ const RestaurantCategory = ({ data, showItemList  }) => {
 
   return (
     <div>
-      { (
+      {
         <div className="m-4 p-4 ">
           <div
             className="m-2 p-1 text-left flex justify-between items-center cursor-pointer"
@@ -23,13 +23,9 @@ const RestaurantCategory = ({ data, showItemList  }) => {
             </div>
             <span>🔽</span>
           </div>
-          { showItemList ? (
-            <ItemList items={data?.itemCards} />
-          ) : (
-            ""
-          )}
+          {showItemList ? <ItemList items={data?.itemCards} /> : ""}
         </div>
-      )}
+      }
     </div>
   );
 };
