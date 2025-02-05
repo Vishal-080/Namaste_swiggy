@@ -12,19 +12,24 @@ const RestaurantMenu = () => {
 
   const [showIndex, setShowIndex] = useState(0);
 
-  
-  const categories = resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" || c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+  const categories =
+    resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+          "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" ||
+        c.card?.card?.["@type"] ===
+          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
 
   // const [resInfo, setresInfo] = useState(null);
 
   // console.log(categories,"res info");
 
-
-  const resultCategories = categories?.filter((c) => c?.card?.card?.itemCards?.length >= 1);
+  const resultCategories = categories?.filter(
+    (c) => c?.card?.card?.itemCards?.length >= 1
+  );
 
   // console.log(resultCategories, "resultCategory");
-
-
 
   // useEffect(() => {
   //   fetchMenu();
@@ -53,8 +58,6 @@ const RestaurantMenu = () => {
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards;
 
- 
-
   return (
     <div className="w-6/12 text-center m-auto bg-[#202020]">
       {/* border border-solid border-black  */}
@@ -68,8 +71,7 @@ const RestaurantMenu = () => {
         {cuisines.join(" | ")} &nbsp; <span>{costForTwoMessage}</span>
       </p>
       &nbsp;
-      
-    {/*  <h5>
+      {/*  <h5>
         LIST OR DISHES :-
         {itemCardsData.map((items) => (
           <ul>
@@ -81,13 +83,16 @@ const RestaurantMenu = () => {
           </ul>
         ))}
       </h5> */}
-
-      {
-        resultCategories.map((category, index)=> (
-          <RestaurantCategory key={category?.card?.card?.title
-          } data={category?.card?.card} showItemList={index === showIndex ? true : "" } setShowIndex={() => index === showIndex ? setShowIndex(null) : setShowIndex(index)}/>
-        ))
-      }
+      {resultCategories.map((category, index) => (
+        <RestaurantCategory
+          key={category?.card?.card?.title}
+          data={category?.card?.card}
+          showItemList={index === showIndex ? true : ""}
+          setShowIndex={() =>
+            index === showIndex ? setShowIndex(null) : setShowIndex(index)
+          }
+        />
+      ))}
     </div>
   );
 };
