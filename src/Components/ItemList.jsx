@@ -2,6 +2,7 @@ import React from "react";
 import { RES_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
+  
   // console.log(items, "items");
 
   const handleAddClick = () => {
