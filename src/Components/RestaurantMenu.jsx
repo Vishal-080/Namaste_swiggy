@@ -10,6 +10,8 @@ const RestaurantMenu = () => {
   const resInfo = useRestaurantMenu(resId);
   // const [showItemList, setShowItemList] = useState(false);
 
+  const [showIndex, setShowIndex] = useState(0);
+
   
   const categories = resInfo?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" || c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 
@@ -20,7 +22,7 @@ const RestaurantMenu = () => {
 
   const resultCategories = categories?.filter((c) => c?.card?.card?.itemCards?.length >= 1);
 
-  console.log(resultCategories, "resultCategory");
+  // console.log(resultCategories, "resultCategory");
 
 
 
@@ -83,7 +85,7 @@ const RestaurantMenu = () => {
       {
         resultCategories.map((category, index)=> (
           <RestaurantCategory key={category?.card?.card?.title
-          } data={category?.card?.card} showItemList={index == 0 ? true : "" } />
+          } data={category?.card?.card} showItemList={index === showIndex ? true : "" } setShowIndex={()=> setShowIndex(index)} showIndex={showIndex}/>
         ))
       }
     </div>
