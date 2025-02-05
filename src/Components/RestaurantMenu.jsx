@@ -17,6 +17,13 @@ const RestaurantMenu = () => {
 
   // console.log(categories,"res info");
 
+
+  const resultCategories = categories?.filter((c) => c?.card?.card?.itemCards?.length >= 1);
+
+  console.log(resultCategories, "resultCategory");
+
+
+
   // useEffect(() => {
   //   fetchMenu();
   // }, []);
@@ -44,7 +51,7 @@ const RestaurantMenu = () => {
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
       ?.itemCards;
 
-  // console.log(categories, "CardsData");
+ 
 
   return (
     <div className="w-6/12 text-center m-auto bg-[#202020]">
@@ -74,9 +81,9 @@ const RestaurantMenu = () => {
       </h5> */}
 
       {
-        categories.map((category)=>(
+        resultCategories.map((category, index)=> (
           <RestaurantCategory key={category?.card?.card?.title
-          } data={category?.card?.card} showItemList={true}/>
+          } data={category?.card?.card} showItemList={index == 0 ? true : "" } />
         ))
       }
     </div>
