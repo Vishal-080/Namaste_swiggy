@@ -6,7 +6,6 @@ const RestaurantCategory = ({ data, showItemList, setShowIndex }) => {
   // console.log(data,"data   d");
   // const [showItemList, setShowItemList] = useState(false);
 
-
   const handleClick = () => {
     setShowIndex();
   };
