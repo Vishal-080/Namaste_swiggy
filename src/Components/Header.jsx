@@ -9,6 +9,7 @@ const Header = () => {
   const {loggedInUser}  = useContext(UserContext);
 
   // console.log(status, "hey status");
+  
   return (
     <div className="flex justify-between items-center text-black bg-[#00ffff] px-3">
       <div>
