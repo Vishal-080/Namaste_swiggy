@@ -6,7 +6,7 @@ import UserContext from "../utils/UserContext";
 const Header = () => {
   
   const status = useOnlineStatus();
-  const data = useContext(UserContext);
+  const {loggedInUser}  = useContext(UserContext);
 
   // console.log(status, "hey status");
   return (
@@ -35,7 +35,7 @@ const Header = () => {
           </li>
           <li className="m-2.5 p-1">Cart</li>
           <li className="m-2.5 p-1">Login</li>
-          <li className="m-2.5 p-1">{data}</li>
+          <li className="m-2.5 p-1">{loggedInUser}</li>
         </ul>
       </div>
     </div>
