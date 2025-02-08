@@ -5,7 +5,7 @@ import UserContext from "../utils/UserContext";
 const RestaurantCard = (props) => {
   const { resData } = props;
 
-  const {loggedInUser} = useContext(UserContext);
+  const { loggedInUser } = useContext(UserContext);
 
   return (
     <div className="flex w-60 h-[500px] border border-black border-solid p-2 m-5 flex-col justify-center items-center text-center bg-[#faebd7] rounded-lg text-black cursor-pointer hover:border-8 hover:border-solid hover:border-lime-500">
@@ -27,13 +27,16 @@ const RestaurantCard = (props) => {
 };
 
 export const isOpen = (RestaurantCard) => {
-  return (props)=>{
-    return (<>
-      <label className="p-1 rounded-lg z-10 relative left-5 top-12 bg-black hover:text-lime-400">Open Now</label>
-      <RestaurantCard {...props}/>
-    </>)
-  }
-
-}
+  return (props) => {
+    return (
+      <>
+        <label className="p-1 rounded-lg z-10 relative left-5 top-12 bg-black hover:text-lime-400">
+          Open Now
+        </label>
+        <RestaurantCard {...props} />
+      </>
+    );
+  };
+};
 
 export default RestaurantCard;
