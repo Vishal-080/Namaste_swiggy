@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { RES_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+
+  const {loggedInUser} = useContext(UserContext);
+
   return (
     <div className="flex w-60 h-[500px] border border-black border-solid p-2 m-5 flex-col justify-center items-center text-center bg-[#faebd7] rounded-lg text-black cursor-pointer hover:border-8 hover:border-solid hover:border-lime-500">
       <img
@@ -13,6 +18,7 @@ const RestaurantCard = (props) => {
       </h2>
       <h4>{resData?.info?.avgRating} Stars</h4>
       <h4>{resData?.info?.costForTwo}</h4>
+      <h4>User :- {loggedInUser}</h4>
       <button className="bg-[#6fe86f] text-black py-2 px-3 my-2 rounded-lg cursor-pointer hover:bg-[#4a9c4a] hover:text-white">
         Order Now
       </button>
