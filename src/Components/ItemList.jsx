@@ -2,7 +2,6 @@ import React from "react";
 import { RES_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
-
   const handleAddClick = () => {
     console.log("Add to Cart clicked");
   };
