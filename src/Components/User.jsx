@@ -20,8 +20,8 @@ const User = (props) => {
   const { name, location, company } = userInfo;
 
   return (
-    <div className="user-card py-5 text-center">
-      <img src={userInfo.avatar_url} alt="image" className="w-52"/>
+    <div className="user-card py-5 text-center flex flex-col justify-center items-center">
+      <img src={userInfo.avatar_url} alt="image" className="w-52 h-52 rounded-full m-5 border-[12px] border-solid border-[#87ceeb]"/>
       <h2>Name :- {name}</h2>
       <h3>Location :- {location}</h3>
       <h4>Company :- {company}</h4>
