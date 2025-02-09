@@ -121,13 +121,13 @@
   cursor: pointer;
 } */
 
-.shimmer-container{
+/* .shimmer-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin:50px 20px;
-}
+} */
 
 .shimmer-card{
   width: 250px;
