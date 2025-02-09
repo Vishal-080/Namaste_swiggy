@@ -3,7 +3,7 @@ import { RES_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
   const handleAddClick = () => {
-    console.log("Add to Cart clicked");
+    console.log("Add to Cart Clicked");
   };
 
   return (
