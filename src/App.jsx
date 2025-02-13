@@ -11,13 +11,13 @@ const AppLayout = () => {
 
   return (
     <>
-    <Provider store={appStore}>
-      <UserContext.Provider value={{ loggedInUser: "Vishal" }}>
-        <UserContext.Provider value={{ loggedInUser: "Vishal Rathod" }}>
-          <Header />
+      <Provider store={appStore}>
+        <UserContext.Provider value={{ loggedInUser: "Vishal" }}>
+          <UserContext.Provider value={{ loggedInUser: "Vishal Rathod" }}>
+            <Header />
+          </UserContext.Provider>
+          <Outlet />
         </UserContext.Provider>
-        <Outlet />
-      </UserContext.Provider>
       </Provider>
     </>
   );
