@@ -6,9 +6,8 @@ import { useSelector } from "react-redux";
 import appStore from "../utils/appStore";
 
 const Header = () => {
-  
   const status = useOnlineStatus();
-  const {loggedInUser}  = useContext(UserContext);
+  const { loggedInUser } = useContext(UserContext);
 
   const cartItems = useSelector((store) => store.cart.items);
 
@@ -36,7 +35,9 @@ const Header = () => {
           <li className="m-2.5 p-1">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="m-2.5 p-1 font-bold">Cart ({cartItems.length}-items)</li>
+          <li className="m-2.5 p-1 font-bold">
+            Cart ({cartItems.length}-items)
+          </li>
           <li className="m-2.5 p-1">Login</li>
           <li className="m-2.5 p-1 font-bold">{loggedInUser}</li>
         </ul>
