@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useContext, useState } from "react";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+import appStore from "../utils/appStore";
 
 const Header = () => {
   
   const status = useOnlineStatus();
   const {loggedInUser}  = useContext(UserContext);
 
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between items-center text-black bg-[#00ffff] px-3">
