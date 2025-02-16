@@ -34,7 +34,7 @@ const ItemList = ({ items }) => {
             <img src={RES_URL + item?.card?.info?.imageId} alt="res_img" />
             <button
               className="rounded-lg bg-white text-black px-3 relative cursor-pointer"
-              onClick={handleAddClick}
+              onClick={handleAddItem}
             >
               Add +
             </button>
