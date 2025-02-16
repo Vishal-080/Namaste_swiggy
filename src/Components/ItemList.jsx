@@ -5,10 +5,10 @@ import { addItems } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
 
-  const Dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const handleAddItem = () => {
-    Dispatch(addItems("pizza"));
+    dispatch(addItems("pizza"));
   };
 
   return (
