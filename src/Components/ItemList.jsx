@@ -1,9 +1,13 @@
 import React from "react";
 import { RES_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
 
 const ItemList = ({ items }) => {
-  const handleAddClick = () => {
-    console.log("Add to Cart Clicked");
+
+  const Dispatch = useDispatch()
+
+  const handleAddItem = () => {
+    console.log("Item added successfully");
   };
 
   return (
