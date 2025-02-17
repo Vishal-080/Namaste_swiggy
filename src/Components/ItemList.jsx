@@ -8,8 +8,9 @@ const ItemList = ({ items }) => {
   const dispatch = useDispatch()
 
   const handleAddItem = () => {
-    dispatch(addItems("pizza"));
+ dispatch(addItems("pizza"));
   };
+  
 
   return (
     <div>
@@ -39,7 +40,7 @@ const ItemList = ({ items }) => {
             <img src={RES_URL + item?.card?.info?.imageId} alt="res_img" />
             <button
               className="rounded-lg bg-white text-black px-3 relative cursor-pointer"
-              onClick={handleAddItem}
+              onClick={() => handleAddItem(item)}
             >
               Add +
             </button>
