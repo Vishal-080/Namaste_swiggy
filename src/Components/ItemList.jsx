@@ -7,8 +7,8 @@ const ItemList = ({ items }) => {
 
   const dispatch = useDispatch()
 
-  const handleAddItem = () => {
- dispatch(addItems("pizza"));
+  const handleAddItem = (item) => {
+ dispatch(addItems(item));
   };
   
 
