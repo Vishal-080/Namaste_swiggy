@@ -9,6 +9,7 @@ const ItemList = ({ items }) => {
 
   const handleAddItem = (item) => {
  dispatch(addItems(item));
+ 
   };
   
 
