@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
+    
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
