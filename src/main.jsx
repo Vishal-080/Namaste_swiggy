@@ -8,10 +8,12 @@ import Body from "./Components/Body";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import Cart from "./Components/Cart";
 
 
 const Grocery = lazy(() => import("./Components/Grocery"));
 const About = lazy(() => import("./Components/About"));
+
 
 const appRouter = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <Grocery />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Cart />
           </Suspense>
         ),
       },
