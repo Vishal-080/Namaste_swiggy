@@ -13,8 +13,8 @@ const Cart = () => {
   };
 
   return (
-    <div className="text-center w-6/12 m-auto">
-      <h1 className="font-semibold text-2xl">My Cart</h1>
+    <div className="text-center w-6/12 m-auto my-4">
+      <h1 className="font-semibold text-xl">My Cart</h1>
       <button
         className="px-4 py-2 text-center m-2 rounded-lg bg-black text-white cursor-pointer"
         onClick={handleClearCart}
