@@ -3,7 +3,6 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import { useContext, useState } from "react";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
-import appStore from "../utils/appStore";
 
 const Header = () => {
   const status = useOnlineStatus();
