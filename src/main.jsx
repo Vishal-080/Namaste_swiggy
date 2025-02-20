@@ -10,11 +10,9 @@ import "./index.css";
 import RestaurantMenu from "./Components/RestaurantMenu";
 // import Cart from "./Components/Cart";
 
-
 const Grocery = lazy(() => import("./Components/Grocery"));
 const About = lazy(() => import("./Components/About"));
-const Cart = lazy(() => import("./Components/Cart" ));
-
+const Cart = lazy(() => import("./Components/Cart"));
 
 const appRouter = createBrowserRouter([
   {
