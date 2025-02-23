@@ -1,7 +1,5 @@
-import sum from "../sum";
+const sum = require("../sum");
 
-test("Calculates the sum of two numbers", () => {
-  const result = sum(3, 5);
-
-  expect(result).toBe(8);
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
 });
