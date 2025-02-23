@@ -1,5 +1,3 @@
-function sum(a,b) {
+export const sum = (a,b) => {
     return (a+b);
 }
-
-export default sum;
