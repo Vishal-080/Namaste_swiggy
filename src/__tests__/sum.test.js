@@ -5,4 +5,4 @@ test("Calculates the sum of two numbers", ()=> {
 
     expect(result).toBe(8);
 
-})
+});
