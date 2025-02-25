@@ -12,7 +12,7 @@ const Header = () => {
   // use selector is used to subscribe the store
 
   return (
-    <div className="flex justify-between items-center text-black bg-[#00ffff] px-3">
+    <div className="flex justify-between items-center text-black bg-[#00ffff] px-3 cursor-default">
       <div>
         <img
           className="h-16"
