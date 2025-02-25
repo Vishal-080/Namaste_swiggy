@@ -7,7 +7,7 @@ const CartTotal = ({ total }) => {
         <h1 className="mt-4">Total amount :-</h1>
         <p className="mt-4">Rs. {total} ₹</p>
       </div>
-      <button className="px-4 py-2 rounded-lg bg-green-400 text-white font-medium cursor-pointer">
+      <button className="px-4 py-2 rounded-lg bg-green-500 text-white font-medium cursor-pointer hover:bg-green-600">
         Pay {total}
       </button>
     </>
