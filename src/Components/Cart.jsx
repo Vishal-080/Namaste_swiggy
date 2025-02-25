@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemList from "./ItemList";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../utils/cartSlice";
@@ -7,6 +7,12 @@ const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   const dispatch = useDispatch();
+
+  const [total, setTotal] = useState(0);
+  // console.log(cartItems[0]?.card?.info.price/100, "cart items");
+
+  const price = cartItems.map((items)=> items?.card?.info.price/100) ;
+  console.log(price,"price");
 
   const handleClearCart = () => {
     dispatch(clearCart());
