@@ -19,13 +19,13 @@ const Cart = () => {
 
   useEffect(() => {
     let sum = 0;
+
     price.forEach((el) => {
       sum += el;
     });
 
     setTotal(sum);
-
-    console.log("total", total);
+    // console.log("total", total);
   }, []);
 
   const handleClearCart = () => {
