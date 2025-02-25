@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CartTotal = () => {
+const CartTotal = ({total}) => {
   return (
-    <div>
+    <div className=''>
         <h1>Total amount :-</h1>
-        <p>{}</p>
+        <p>{total}</p>
     </div>
   )
 }
