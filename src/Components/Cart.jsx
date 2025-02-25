@@ -11,14 +11,18 @@ const Cart = () => {
   const [total, setTotal] = useState(0);
   // console.log(cartItems[0]?.card?.info.price/100, "cart items");
 
-  const price = cartItems.map((items) => items?.card?.info.price/100) ;
+  const price = cartItems.map((items) => items?.card?.info.price/100 || items?.card?.info.defaultPrice/100) ;
 
-  
+  useEffect(()=>{
+    let sum = 0;
+    price.forEach(el => {
+      sum += el;
+    });
 
+    setTotal(sum);
 
-  // useEffect(()=>{
-  //   setTotal(total+price);
-  // },[]);  
+    console.log("total", total);
+  },[]);  
 
   const handleClearCart = () => {
     dispatch(clearCart());
@@ -43,7 +47,7 @@ const Cart = () => {
         " "
       )}
       <ItemList items={cartItems}></ItemList>
-      <h1>Total :- {total}</h1>
+     {cartItems.length !== 0 ? <h1>Total :- {total}</h1> : "" } 
     </div>
   );
 };
