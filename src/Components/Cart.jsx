@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../utils/cartSlice";
+import CartTotal from "./CartTotal";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -50,7 +51,8 @@ const Cart = () => {
         " "
       )}
       <ItemList items={cartItems}></ItemList>
-      {cartItems.length !== 0 ? <h1>Total :- {total}</h1> : ""}
+      {cartItems.length !== 0 ?  <CartTotal total={total} /> : ""}
+     
     </div>
   );
 };
