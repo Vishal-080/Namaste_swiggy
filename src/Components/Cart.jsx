@@ -52,7 +52,6 @@ const Cart = () => {
       )}
       <ItemList items={cartItems}></ItemList>
       {cartItems.length !== 0 ? <CartTotal total={total} /> : ""}
-      
     </div>
   );
 };
