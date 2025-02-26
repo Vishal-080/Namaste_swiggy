@@ -9,17 +9,17 @@ const Checkout = () => {
         <div className="w-9/12 m-auto">
           <div className="flex justify-between">
             <label htmlFor="house-no">House no./Street name :-</label>
-            <input type="text" name="house-no" required/>
+            <input type="text" name="house-no" required placeholder="Enter House No...." className="indent-2"/>
           </div>
           <br />
           <div className="flex justify-between">
             <label htmlFor="address">Address :- </label>
-            <input type="text" name="address" required/>
+            <input type="text" name="address" required placeholder="Enter Address" className="indent-2"/>
           </div>
           <br />
           <div className="flex justify-between">
             <label htmlFor="city">City :- </label>
-            <input type="text" name="city" required/>
+            <input type="text" name="city" required placeholder="Enter City" className="indent-2"/>
           </div>
         </div>
         <br />
