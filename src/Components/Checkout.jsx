@@ -7,26 +7,20 @@ const Checkout = () => {
       <div className="my-2 py-6 border flex flex-col">
         <h1 className="font-bold text-lg mb-4 text-center">Address details</h1>
         <div className="w-9/12 m-auto">
-        <div className="flex justify-between">
-        <label  htmlFor="house-no">
-          House no./Street name :-  
-        </label>
-        <input type="text" name="house-no" />
-        </div>
-        <br />
-        <div className="flex justify-between">
-        <label htmlFor="address">
-          Address :- 
-        </label>
-        <input type="text" name="address" />
-        </div>
-        <br />
-        <div className="flex justify-between">
-        <label htmlFor="city">
-          City :- 
-        </label>
-        <input type="text" name="city" />   
-        </div>
+          <div className="flex justify-between">
+            <label htmlFor="house-no">House no./Street name :-</label>
+            <input type="text" name="house-no" />
+          </div>
+          <br />
+          <div className="flex justify-between">
+            <label htmlFor="address">Address :-</label>
+            <input type="text" name="address" />
+          </div>
+          <br />
+          <div className="flex justify-between">
+            <label htmlFor="city">City :-</label>
+            <input type="text" name="city" />
+          </div>
         </div>
         <br />
         <button className="">Confirm Address</button>
