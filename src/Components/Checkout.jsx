@@ -1,6 +1,14 @@
 import React from "react";
 
 const Checkout = () => {
+
+    const handleConfirmAddress = (e) => {
+        e.preventDefault(); 
+        alert("Address Confirmed");
+    }
+
+
+
   return (
     <div className="w-6/12 m-auto">
       <h1 className="font-bold text-xl m-2 text-center">Check-Out</h1>
@@ -23,7 +31,7 @@ const Checkout = () => {
           </div>
         </div>
         <br />
-        <button className="bg-blue-500 w-4/12 m-auto rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600">Confirm Address</button>
+        <button className="bg-blue-500 w-4/12 m-auto rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600" onClick={(e)=> handleConfirmAddress(e)} type="submit">Confirm Address</button>
       </div>
       <div>
         <label htmlFor="upi">Select UPI</label>
