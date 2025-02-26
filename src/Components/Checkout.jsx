@@ -2,21 +2,32 @@ import React from "react";
 
 const Checkout = () => {
   return (
-    <div>
+    <div className="w-6/12 m-auto">
       <h1 className="font-bold text-xl m-2 text-center">Check-Out</h1>
-      <div className="flex flex-col justify-between items-center my-2 py-6 border text-left">
+      <div className="my-2 py-6 border flex flex-col">
         <h1 className="font-bold text-lg mb-4 text-center">Address details</h1>
-        <label htmlFor="house-no">
-          House no./Street name :- <input type="text" name="house-no" />
+        <div className="w-9/12 m-auto">
+        <div className="flex justify-between">
+        <label  htmlFor="house-no">
+          House no./Street name :-  
         </label>
+        <input type="text" name="house-no" />
+        </div>
         <br />
+        <div className="flex justify-between">
         <label htmlFor="address">
-          Address :- <input type="text" name="address" />
+          Address :- 
         </label>
+        <input type="text" name="address" />
+        </div>
         <br />
+        <div className="flex justify-between">
         <label htmlFor="city">
-          City :- <input type="text" name="city" />
+          City :- 
         </label>
+        <input type="text" name="city" />   
+        </div>
+        </div>
         <br />
         <button className="">Confirm Address</button>
       </div>
