@@ -1,7 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { clearCart } from "../utils/cartSlice";
 
 const Checkout = () => {
+
+    const dispatch = useDispatch();
 
     const handleConfirmAddress = (e) => {
         e.preventDefault(); 
@@ -10,6 +14,7 @@ const Checkout = () => {
 
     const handlePayAndPlaceOrder = () => {
         alert("Thank you for ordering with Us...!");
+        dispatch(clearCart());
     };
 
   return (
