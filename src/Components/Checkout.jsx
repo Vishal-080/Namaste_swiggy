@@ -10,7 +10,7 @@ const Checkout = () => {
 
 
   return (
-    <div className="w-7/12 m-auto">
+    <div className="w-7/12 m-auto flex flex-col">
       <h1 className="font-bold text-xl m-2 text-center">Check-Out</h1>
       <div className="my-2 py-6 flex flex-col">
         <h1 className="font-bold text-lg mb-4 text-center">Address details</h1>
@@ -33,15 +33,16 @@ const Checkout = () => {
         <br />
         <input className="bg-blue-500 w-4/12 m-auto rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600" onClick={(e)=> handleConfirmAddress(e)} type="submit" value={"Confirm Address"} />
       </div>
-      <div>
-        <label htmlFor="upi">Select UPI</label>
-        <input type="checkbox" name="gpay" />
-        <label htmlFor="gpay">G-pay</label>
-        <input type="checkbox" name="paytm" />
-        <label htmlFor="paytm">Paytm</label>
-        <input type="checkbox" name="phonepe" />
-        <label htmlFor="phonepe">Phone-Pe</label>
+      <div className=" flex justify-evenly">
+        <label htmlFor="upi">Select UPI  :-</label>
+        
+        <label htmlFor="gpay"><input type="checkbox" name="gpay" />  G-pay</label>
+        
+        <label htmlFor="paytm"><input type="checkbox" name="paytm" />  Paytm</label>
+        
+        <label htmlFor="phonepe"> <input type="checkbox" name="phonepe" />  Phone-Pe</label>
       </div>
+      <button className="bg-blue-500 w-4/12 m-auto my-4 rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600">Pay and Place Order</button>
     </div>
   );
 };
