@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
 
     const handleConfirmAddress = (e) => {
         e.preventDefault(); 
         alert("Address Confirmed...!");
-    }
+    };
 
-
+    const handlePayAndPlaceOrder = () => {
+        alert("Thank you for ordering with Us...!");
+    };
 
   return (
     <div className="w-7/12 m-auto flex flex-col">
@@ -42,7 +45,7 @@ const Checkout = () => {
         
         <label htmlFor="phonepe"> <input type="checkbox" name="phonepe" />  Phone-Pe</label>
       </div>
-      <button className="bg-blue-500 w-4/12 m-auto my-4 rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600">Pay and Place Order</button>
+      <button className="bg-blue-500 w-4/12 m-auto my-4 rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600" onClick={handlePayAndPlaceOrder}><Link to="/">Pay and Place Order</Link></button>
     </div>
   );
 };
