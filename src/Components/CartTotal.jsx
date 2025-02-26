@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CartTotal = ({ total }) => {
   return (
@@ -8,7 +9,7 @@ const CartTotal = ({ total }) => {
         <p className="mt-4">Rs. {total} ₹</p>
       </div>
       <button className="px-4 py-2 rounded-lg bg-green-500 text-white font-medium cursor-pointer hover:bg-green-600">
-        Pay {total}
+        <Link to ="/checkout">Pay {total}</Link>
       </button>
     </>
   );
