@@ -57,7 +57,7 @@ const Checkout = () => {
         </div>
         <br />
         <input
-          className="bg-blue-500 w-4/12 m-auto rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600"
+          className="btn text-white bg-blue-500 w-4/12 m-auto rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600"
           onClick={(e) => handleConfirmAddress(e)}
           type="submit"
           value={"Confirm Address"}
@@ -80,12 +80,12 @@ const Checkout = () => {
         </label>
       </div>
       <button
-        className="bg-blue-500 w-4/12 m-auto my-4 rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600"
+        className="btn text-white bg-blue-500 w-4/12 m-auto my-4 rounded-lg p-2 font-medium cursor-pointer hover:bg-blue-600"
         onClick={handlePayAndPlaceOrder}
       >
         <Link to="/">Pay and Place Order</Link>
       </button>
-      <button class="btn">Button</button>
+      <button class="btn bg-primary text-white">Button</button>
     </div>
   );
 };
