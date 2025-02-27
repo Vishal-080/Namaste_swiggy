@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { RES_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addItems } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
+  const [showToast, setShowToast] = useState(false);
 
   const handleAddItem = (item) => {
     dispatch(addItems(item));
