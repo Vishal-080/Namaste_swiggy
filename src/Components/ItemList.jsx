@@ -10,6 +10,10 @@ const ItemList = ({ items }) => {
   const handleAddItem = (item) => {
     dispatch(addItems(item));
     setShowToast(true);
+
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
   };
 
   return (
@@ -48,9 +52,9 @@ const ItemList = ({ items }) => {
         </div>
       ))}
       {showToast ? (
-        <div className="toast">
-          <div className="alert alert-info">
-            <span>Item added to Cart...!</span>
+        <div className="toast ">
+          <div className="alert bg-lime-400 text-black font-medium alert-info">
+            <span>Item Added Successfully</span>
           </div>
         </div>
       ) : (
