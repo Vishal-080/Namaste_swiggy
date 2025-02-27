@@ -4,7 +4,10 @@ const Shimmer = () => {
   return (
     <div className="m-5 p-2">
       <p className="text-center font-bold text-xl">
-        Loading...!!!
+        Loading... <br />
+        <br />
+        <span className="loading loading-spinner loading-md"></span>
+        <br />
         <br />
         or Please refresh the page
       </p>
