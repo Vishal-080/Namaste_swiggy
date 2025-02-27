@@ -93,6 +93,13 @@ const Body = () => {
           </Link>
         ))}
       </div>
+      <footer className="footer footer-center bg-base-300 text-base-content p-4">
+        <aside>
+          <p>
+            Copyright © {new Date().getFullYear()} - Crafted with ❤ and JavaScript by Vishal Rathod
+          </p>
+        </aside>
+      </footer>
     </div>
   );
 };
