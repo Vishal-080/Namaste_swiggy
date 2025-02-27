@@ -85,6 +85,7 @@ const Checkout = () => {
       >
         <Link to="/">Pay and Place Order</Link>
       </button>
+      <button class="btn">Button</button>
     </div>
   );
 };
