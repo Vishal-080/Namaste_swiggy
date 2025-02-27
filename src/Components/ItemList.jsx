@@ -9,6 +9,7 @@ const ItemList = ({ items }) => {
 
   const handleAddItem = (item) => {
     dispatch(addItems(item));
+    setShowToast(true);
   };
 
   return (
@@ -46,11 +47,15 @@ const ItemList = ({ items }) => {
           </div>
         </div>
       ))}
-      {showToast ?  <div className="toast">
-  <div className="alert alert-info">
-    <span>New message arrived.</span>
-  </div>
-</div> : ""}
+      {showToast ? (
+        <div className="toast">
+          <div className="alert alert-info">
+            <span>Item added to Cart...!</span>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
