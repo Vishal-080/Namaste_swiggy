@@ -14,11 +14,11 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center text-black bg-[#00ffff] px-3 cursor-default">
       <div>
-        <img
+        <Link to="/"><img
           className="h-16"
           src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
           alt="logo"
-        />
+        /></Link>
       </div>
       <div className="nav-items">
         <ul className="flex p-1 text-md font-medium">
