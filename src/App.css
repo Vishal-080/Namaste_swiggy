@@ -146,10 +146,10 @@
   color: #000;
 } */
 
-.nav-items>ul {
+/* .nav-items>ul {
   cursor: pointer;
   border: 1px solid red;
-}
+} */
 
 .nav-items>ul>li>a {
   text-decoration: none;
