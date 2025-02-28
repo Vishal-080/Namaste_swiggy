@@ -23,7 +23,7 @@ const Body = () => {
 
     const jsonData = await data.json();
 
-    console.log(data," api data");
+    // console.log(data," api data");
 
     setListOfRestaurants(
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
