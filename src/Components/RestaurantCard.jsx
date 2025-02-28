@@ -26,6 +26,7 @@ const RestaurantCard = (props) => {
   );
 };
 
+// isOpen is a Higher Order Component
 export const isOpen = (RestaurantCard) => {
   return (props) => {
     return (

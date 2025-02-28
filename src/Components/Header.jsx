@@ -12,7 +12,7 @@ const Header = () => {
   // use selector is used to subscribe the store
 
   return (
-    <div className="flex justify-between items-center text-black bg-[#00ffff] px-3 cursor-default">
+    <div className="flex justify-between items-center text-black bg-[#00ffff] px-3 cursor-default ">
       <div>
         <Link to="/"><img
           className="h-16"
@@ -20,8 +20,8 @@ const Header = () => {
           alt="logo"
         /></Link>
       </div>
-      <div className="nav-items">
-        <ul className="flex p-1 text-md font-medium">
+      <div className="nav-items flex-wrap">
+        <ul className="flex p-1 text-md font-medium cursor-pointer">
           <li className="m-2.5 p-1">Online Status : {status ? "🟢" : "🔴"}</li>
           <li className="m-2.5 p-1">
             <Link to="/">Home</Link>
