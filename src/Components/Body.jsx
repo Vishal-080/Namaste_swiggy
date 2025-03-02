@@ -17,7 +17,10 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/mapi/restaurants/list/v5?lat=12.9352403&lng=77.624532"
+      "https://www.swiggy.com/mapi/restaurants/list/v5?lat=12.9352403&lng=77.624532",
+      {
+        headers: { "Access-Control-Allow-Origin": "*" },
+      }
       // "https://www.swiggy.com/mapi/restaurants/list/v5?&lat=12.9352403&lng=77.624532&"
     );
 
@@ -99,7 +102,8 @@ const Body = () => {
       <footer className="footer footer-center bg-base-300 text-base-content p-4">
         <aside>
           <p>
-            Copyright © {new Date().getFullYear()} - Crafted with ❤ and JavaScript by Vishal Rathod
+            Copyright © {new Date().getFullYear()} - Crafted with ❤ and
+            JavaScript by Vishal Rathod
           </p>
         </aside>
       </footer>
