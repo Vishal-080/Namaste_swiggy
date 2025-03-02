@@ -40,7 +40,9 @@ const Header = () => {
           <li className="m-2.5 p-1 font-bold">
             <Link to="/cart"> Cart ({cartItems.length}-items) </Link>
           </li>
-          <li className="m-2.5 p-1">Login</li>
+          <li className="m-2.5 p-1">
+            <Link to="/login">Login</Link>
+          </li>
           <li className="m-2.5 p-1 font-bold">{loggedInUser}</li>
         </ul>
       </div>
