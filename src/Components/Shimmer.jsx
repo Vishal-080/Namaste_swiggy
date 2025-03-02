@@ -7,7 +7,7 @@ const Shimmer = () => {
         Loading... <br />
         <span className="loading loading-spinner loading-md"></span>
         <br />
-        or Please refresh the page
+        or Open Inspect and Please refresh the page 
       </p>
       <div className="flex flex-wrap justify-center items-center my-12 mx-8 p-12">
         <div className="shimmer-card"></div>
