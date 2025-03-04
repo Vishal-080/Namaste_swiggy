@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-        {/* <h1 className="text-center font-semibold text-xl my-4">Login Here...!</h1> */}
       <fieldset className="fieldset w-6/12 m-auto my-4 border text-center p-4 rounded-box">
         <legend className="fieldset-legend text-center font-semibold text-xl">Login</legend>
 <br />
